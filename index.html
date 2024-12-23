@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextillateJS Text Animation</title>
+    <link rel="stylesheet" href="./textillate-master/textillate-master/assets/animate.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #0f1424;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .text {
+            color: #00aee6;
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: capitalize;
+            text-align: center;
+            -webkit-box-reflect: below -30px linear-gradient(transparent, #00000040);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="text">Textillate js animation effects</h2>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/textillate-master/textillate-master/assets/jquery.lettering.js"></script>
+<script src="/textillate-master/textillate-master/jquery.textillate.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".text").textillate({
+            loop: true,
+            in: {
+                effect: "fadeInDownBig", //set effect name
+                delay: 20, // set delay btwn each character
+                delayScale: 3, //set delay to each consecutive character
+                shuffle: true,
+            },
+            out: {
+                effect: "bounceIn",
+                delayScale: 2,
+                delay: 20,
+                reverse: true,
+            }
+        })
+
+
+    })
+</script>
+
+</html>
